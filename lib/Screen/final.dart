@@ -1,21 +1,18 @@
-// ignore_for_file: prefer_const_constructors
-
-// ignore: unused_import
-import 'dart:convert';
 import 'package:application2/api/ApiProvider.dart';
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:http/http.dart' as http;
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
 import '../model/response_model.dart';
 
-class Weatherapp extends StatefulWidget {
-  const Weatherapp({Key? key}) : super(key: key);
+class MyWidget extends StatefulWidget {
+  const MyWidget({super.key});
 
   @override
-  State<Weatherapp> createState() => _WeatherState();
+  State<MyWidget> createState() => _MyWidgetState();
 }
 
-class _WeatherState extends State<Weatherapp> {
+class _MyWidgetState extends State<MyWidget> {
   ResponseModel? taskdata;
   bool ontap = false;
   var myloacation = 'kolkata';
@@ -47,9 +44,9 @@ class _WeatherState extends State<Weatherapp> {
     // });
   }
 
+  // @override
   @override
   Widget build(BuildContext context) {
-    // bool ontap = false;
     return Scaffold(
         body: taskdata == null
             ? Center(
@@ -301,3 +298,7 @@ class _WeatherState extends State<Weatherapp> {
     //  Text(taskdata.current!.gustKph.toString()));
   }
 }
+
+    //return Container();
+ // }
+//}

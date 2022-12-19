@@ -1,9 +1,14 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:application2/Screen/final.dart';
 import 'package:application2/Screen/weather.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+void runApp(MyApp myApp) {}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -13,10 +18,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
-      // home: Scaffold(
-      home: Weatherapp(),
+      home: MyWidget(),
     );
+
+    // home: Scaffold(
+    // home: Weatherapp(
+    //   key: null,
+    //));
   }
 }
 //       title: 'Flutter Demo',
